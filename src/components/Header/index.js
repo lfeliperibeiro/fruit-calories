@@ -5,10 +5,7 @@ const Header = () => {
     <header>
       <div className="logo">
         Fruit Calories
-      </div>
-      <div className="title">
-        Frutas
-      </div>
+      </div>      
     </header>
   )
 }
