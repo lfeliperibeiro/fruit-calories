@@ -10,10 +10,27 @@ const Home = () => {
      <h1>Frutas</h1>
    </div>
     <div className="fruitContainer">
-      <Card />      
-      <Card />      
-      <Card />      
-      <Card />      
+      <Card 
+      name="Abacaxi"
+      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
+      alt="Abacaxi"
+      />      
+      <Card 
+      name="Abacaxi"
+      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
+      alt="Abacaxi"
+      />      
+      <Card 
+      name="Abacaxi"
+      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
+      alt="Abacaxi"
+      />      
+      <Card 
+      name="Abacaxi"
+      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
+      alt="Abacaxi"
+      />      
+         
     </div>
     </>
    
