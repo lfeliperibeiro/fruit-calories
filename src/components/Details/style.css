@@ -10,9 +10,9 @@
 }
 
 .detail-image img {
-  width: 600px;
-  height: 600px;
-  margin: 125px 0;  
+  width: 590px;
+  height: 590px;
+  margin: 18px 0;  
 }
 
 .details {
@@ -46,8 +46,8 @@
 
 a {
   padding: 50px;
-  margin-top: 20px;
   font-size: 36px;
+  text-decoration: none;
 }
 
 @media (max-width: 1000px) {
@@ -57,8 +57,8 @@ a {
     gap: 16px
   }
   .detail-image img {
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
     margin-top: 70px ;  
   }
 }
