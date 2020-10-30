@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import api from '../../api'
 import Card from '../Card/ index'
 import Footer from '../Footer'
@@ -27,13 +28,14 @@ const Home = () => {
       
       { fruit.map(fruit => {
         return (
-         
+         <Link to='/fruit' >
       <Card 
       key={fruit.name}
       name={fruit.name}
       image={fruit.photo}
       alt={fruit.name}
       /> 
+      </Link>
       
         )
       })}         
