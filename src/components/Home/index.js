@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link, Router } from 'react-router-dom'
 import api from '../../api'
 import Card from '../Card/ index'
+import Footer from '../Footer'
 import Header from '../Header'
 import './style.css'
 
@@ -38,6 +38,7 @@ const Home = () => {
         )
       })}         
     </div>
+    <Footer />
     </>
    )   
   }
