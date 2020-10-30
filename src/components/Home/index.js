@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react'
+import { Link, Router } from 'react-router-dom'
+import api from '../../api'
 import Card from '../Card/ index'
 import Header from '../Header'
 import './style.css'
 
+
 const Home = () => {
+  const [fruit, setFruit] = useState([])
+  
+  useEffect(() => {
+    api.get("fruits.json")
+  .then((res) => setFruit(res.data))
+  .catch((err) => {
+    console.error(err);
+  });
+  }, [])     
+  
   return (
     <>
    <Header />
@@ -10,31 +24,24 @@ const Home = () => {
      <h1>Frutas</h1>
    </div>
     <div className="fruitContainer">
-      <Card 
-      name="Abacaxi"
-      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
-      alt="Abacaxi"
-      />      
-      <Card 
-      name="Abacaxi"
-      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
-      alt="Abacaxi"
-      />      
-      <Card 
-      name="Abacaxi"
-      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
-      alt="Abacaxi"
-      />      
-      <Card 
-      name="Abacaxi"
-      image="http://pocs.digitalpages.com.br/mock/api/fruits-api/fruits/abacaxi.jpg"
-      alt="Abacaxi"
-      />      
+      
+      { fruit.map(fruit => {
+        return (
          
+      <Card 
+      key={fruit.name}
+      name={fruit.name}
+      image={fruit.photo}
+      alt={fruit.name}
+      /> 
+      
+        )
+      })}         
     </div>
     </>
-   
-  )
-}
+   )   
+  }
 
-export default Home
+  export default Home
+
+
