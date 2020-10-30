@@ -28,7 +28,7 @@ const Home = () => {
       
       { fruit.map(fruit => {
         return (
-         <Link to='/fruit' >
+         <Link className="link-home" to='/fruit' >
       <Card 
       key={fruit.name}
       name={fruit.name}
