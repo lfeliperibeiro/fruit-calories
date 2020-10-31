@@ -1,5 +1,5 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Details from './components/Details'
+import FruitPage from './components/FruitPage'
 import Home from './components/Home'
 
 
@@ -8,12 +8,10 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/fruit" exact component={Details}  />
+        <Route path="/:id" exact component={FruitPage}  />
 
       </Switch>
-    </BrowserRouter>
-    
-   
+    </BrowserRouter>  
   )
 }
 export default Routes

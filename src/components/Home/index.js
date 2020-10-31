@@ -21,22 +21,21 @@ const Home = () => {
   return (
     <>
    <Header />
-   <div className="title">
-     <h1>Frutas</h1>
-   </div>
+    <div className="title">
+      <h1>Frutas</h1>
+    </div>
     <div className="fruitContainer">
       
-      { fruit.map(fruit => {
+        { fruit.map(fruit => {
         return (
-         <Link className="link-home" to='/fruit' >
-      <Card 
-      key={fruit.name}
-      name={fruit.name}
-      image={fruit.photo}
-      alt={fruit.name}
-      /> 
-      </Link>
-      
+         <Link className="link-home" to='/fruit'>
+          <Card 
+            key={fruit.name}
+            name={fruit.name}
+            image={fruit.photo}
+            alt={fruit.name}
+          /> 
+        </Link>      
         )
       })}         
     </div>
