@@ -7,6 +7,7 @@ import Header from '../Header'
 import './style.css'
 
 
+
 const Home = () => {
   const [fruit, setFruit] = useState([])
   
@@ -26,9 +27,9 @@ const Home = () => {
     </div>
     <div className="fruitContainer">
       
-        { fruit.map(fruit => {
+        { fruit.map((fruit, index) => {
         return (
-         <Link className="link-home" to='/fruit'>
+         <Link className="link-home" to={`fruit/${index}`}>
           <Card 
             key={fruit.name}
             name={fruit.name}

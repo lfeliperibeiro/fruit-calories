@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import './style.css'
 import api from "../../api"
 import Details from "../Details"
-import './style.css'
-
-
-const { default: Footer } = require("../Footer")
-const { default: Header } = require("../Header")
+import Footer from '../Footer'
+import Header from '../Header'
 
 const FruitPage = () => {
+  let { id }  = useParams()
+   
   const [fruit, setFruit] = useState([])
   
+
   useEffect(() => {
     api.get("fruits.json")
-  .then((res) => setFruit(res.data))
+  .then((res) => setFruit(res.data[id]))
   .catch((err) => {
     console.error(err);
   });
-  }, [])     
+  }, [id])     
   
   return (
     <>
@@ -26,11 +27,9 @@ const FruitPage = () => {
        <Link className="back" to="/">
         ⬅ Voltar
       </Link>
-      </div>
-    { fruit.map((fruit, index) => {
-      return (
-        <Details 
-        key={index}
+      </div>  
+     
+        <Details        
         name={fruit.name}
         photo={fruit.photo}
         calories={fruit.calories}
@@ -39,13 +38,7 @@ const FruitPage = () => {
         fiber={fruit.fiber}
         blubber={fruit.blubber}
         portion={fruit.portion}
-        />
-      
-        )
-      }
-    )
-  }         
-      
+        />    
       
     <Footer/>
     </>

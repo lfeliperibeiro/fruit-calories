@@ -13,15 +13,13 @@ const Details = (props) => {
           <h1>Dados</h1>
           <p> calorias: {props.calories}</p>
           <p> proteinas: {props.protein}</p>
-          <p> carboidratos: {props.carbohydrates} </p>
+          <p> carboidratos: {props.carbohydrates}</p>
           <p> Fibra: {props.fiber}</p>
           <p> Gordura: {props.blubber}</p>
           <p> Porção: {props.portion}</p>        
         </div> 
-      </div> 
-     
-      </>
-      
+      </div>      
+      </>      
   )
 }  
          
