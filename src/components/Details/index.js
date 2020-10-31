@@ -1,3 +1,5 @@
+import './style.css'
+
 const Details = (props) => {
    return (
     

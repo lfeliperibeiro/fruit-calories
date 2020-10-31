@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import api from "../../api"
 import Details from "../Details"
-
 import './style.css'
+
+
 const { default: Footer } = require("../Footer")
 const { default: Header } = require("../Header")
 
@@ -22,7 +23,7 @@ const FruitPage = () => {
     <>
     <Header/>
     <div className="title-detail">
-       <Link to="/">
+       <Link className="back" to="/">
         ⬅ Voltar
       </Link>
       </div>
